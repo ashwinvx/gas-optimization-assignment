@@ -14,12 +14,12 @@ pragma solidity ^0.8.4;
 contract Example2 {
     uint public counter;
     
-    function incrementBy(uint[] calldata arr) public {
+    function incrementBy(uint[] calldata arr) external {
         uint arrLength =  arr.length;
         uint tempSum = counter;
         for (uint idx = 0; idx < arrLength; idx++){
             tempSum += arr[idx];
         }
-        counter += tempSum;
+        counter = tempSum;
     }
 }
